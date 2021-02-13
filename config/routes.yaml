@@ -1,0 +1,17 @@
+index:
+    path: /home
+    controller: App\Controller\RecetasController::index
+
+buscar-receta:
+    path: /receta/buscar/{food}
+    controller: App\Controller\RecetasController::buscar
+    methods: [GET,POST]
+    defaults:
+        food: ''
+
+get-receta:
+    path: /receta/{id}
+    controller: App\Controller\RecetasController::getReceta
+    methods: GET
+    requirements:
+      id: \d+
