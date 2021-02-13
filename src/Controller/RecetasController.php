@@ -25,7 +25,7 @@ class RecetasController extends AbstractController
         ]);
     }
 
-    public function buscar(Request $request, ConectorApi $conectorApi, $food=''): Response
+    public function buscar(Request $request, ConectorApi $conectorApi, ConvertArray $convertArray, $food=''): Response
     {
         if(!$food){
             $food = $request->request->get("food", null);
